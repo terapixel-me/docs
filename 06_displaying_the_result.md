@@ -227,7 +227,7 @@ Just fire it up with Ubuntu and install nginx
 apt install nginx-full
 ```
 
-Now just create a file `/etc/nginx/sites-available/terrapixel.conf` and create the
+Now just create a file `/etc/nginx/sites-available/terapixel.conf` and create the
 two virtual server configurations for the viewer:
 
 ```
@@ -237,12 +237,12 @@ server {
 
 	access_log /var/log/nginx/images.log combined;
 
-	root /var/www/terrapixel;
+	root /var/www/terapixel;
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name images.terrapixel.me;
+	server_name images.terapixel.me;
 
 	location / {
 		# First attempt to serve request as file, then
@@ -261,7 +261,7 @@ server {
 and the caching tile-CDN
 
 ```
-proxy_cache_path /proxycache/local0 levels=1:2 keys_zone=terrapixel:1024m inactive=120d max_size=32g use_temp_path=off;
+proxy_cache_path /proxycache/local0 levels=1:2 keys_zone=terapixel:1024m inactive=120d max_size=32g use_temp_path=off;
 
 log_format main '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" "$upstream_cache_status" "$host" "$http_range" "$request_time" "$upstream_response_time"';
 
@@ -271,17 +271,17 @@ server {
 
 	access_log /var/log/nginx/tilecdn.log main;
 
-	root /var/www/terrapixel;
+	root /var/www/terapixel;
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name tilecdn.terrapixel.me;
+	server_name tilecdn.terapixel.me;
 
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
-		proxy_cache terrapixel;
+		proxy_cache terapixel;
                 proxy_cache_key $proxy_host$request_uri;
 
                 proxy_cache_valid 200 302 10d;
@@ -339,7 +339,7 @@ Which can be used as easy as that:
 ```html
 <html>
   <head>
-    <title>terrapixel.me - 0072.jpg (Unus Annus)</title>
+    <title>terapixel.me - 0072.jpg (Unus Annus)</title>
     <style>
       #viewer {
         width: 100%;
@@ -370,7 +370,7 @@ Which can be used as easy as that:
           maxLevel: 8,
           minLevel: 0,
           getTileUrl: function( level, x, y ){
-            return "https://tilecdn.terrapixel.me/terrapixel/0072.jpg-dump.npy/" +
+            return "https://tilecdn.terapixel.me/terapixel/0072.jpg-dump.npy/" +
                       level + "/" + y + "/" + x + ".jpg";
           }
         }

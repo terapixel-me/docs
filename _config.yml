@@ -13,33 +13,33 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: terrapixel
+title: terapixel
 email: bennet@becker-dd.de
 description: >- # this means to ignore newlines until "baseurl:"
-        This contain documentation and explaintio to my project called terrapixel.
+        This contain documentation and explaintio to my project called terapixel.
         From a set of source images it create meta-image in a mosaic fashion.
 baseurl: "/docs" # the subpath of your site, e.g. /blog
-url: "https://terrapixel.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://terapixel.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bennet0496
 github_username:  bennet0496
 
 heading_anchors: true
 
 
-color_scheme: terrapixel
+color_scheme: terapixel
 
 logo: "assets/images/logo_head.png"
-footer_content: "Copyright &copy; 2020 Bennet Becker. Distributed by an <a href=\"https://github.com/bennet0496/terrapixel/tree/master/LICENSE\">MIT license.</a>"
+footer_content: "Copyright &copy; 2020 Bennet Becker. Distributed by an <a href=\"https://github.com/bennet0496/terapixel/tree/master/LICENSE\">MIT license.</a>"
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 aux_links:
-  "terrapixel":
-    - "https://terrapixel.me/"
+  "terapixel":
+    - "https://terapixel.me/"
   "imprint":
-    - "https://terrapixel.me/imprint.html"
+    - "https://terapixel.me/imprint.html"
   "privacy statement":
-      - "https://terrapixel.me/dataprotection.html"
+      - "https://terapixel.me/dataprotection.html"
 
 
 # Build settings
