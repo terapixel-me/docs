@@ -13,7 +13,7 @@ generated to visualize how far I am.
 
 And it looks like this:
 
-![Halfway]({{site.baseurl}}/assets/images/halfway.png)
+![Halfway]({{site.baseurl}}/assets/images/halfway.jpg)
 
 What does this picture show, you might ask? Well it shows the dominant Color of
 each frame already processed, grouped by the video it belongs to. An interesting
