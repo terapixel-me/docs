@@ -8,7 +8,8 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.2.1"
+#gem "jekyll", "~> 4.2.1"
+gem "jekyll"
 
 gem "just-the-docs"
 gem 'jekyll-toc'
@@ -20,7 +21,8 @@ gem "jekyll-responsive-image"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.16.0"
+  #gem "jekyll-feed", "~> 0.16.0"
+  gem "jekyll-feed"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
